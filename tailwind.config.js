@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class', // ใช้ 'class' เพื่อควบคุมด้วย CSS Class
+  darkMode: "class", // เปิดใช้ Dark Mode
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}", // ใช้สำหรับโฟลเดอร์ app
-    "./components/**/*.{js,ts,jsx,tsx}", // ใช้สำหรับ components
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-text-stroke"), // ปลั๊กอินสำหรับ stroke
+  ],
 };
