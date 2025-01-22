@@ -28,7 +28,7 @@ export default function Hero() {
         {/* กลาง: รูปภาพ */}
         <div className="flex justify-center items-center mx-8">
           <img
-            src="main.jpg"
+            src="main.png"
             alt="Profile"
             className="h-48 w-48 rounded-full border-4 border-gray-700 object-cover"
           />
@@ -54,13 +54,16 @@ export default function Hero() {
       {/* Social Media Icons */}
       <div className="flex space-x-4 mt-16">
         <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-facebook"></i>
+          <i className="fab fa-github"></i>
         </a>
         <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-twitter"></i>
+          <i className="fab fa-linkedin"></i>
         </a>
         <a href="#" className="text-2xl hover:text-gray-400">
           <i className="fab fa-instagram"></i>
+        </a>
+        <a href="#" className="text-2xl hover:text-gray-400">
+          <i className="fab fa-discord"></i>
         </a>
       </div>
     </section>

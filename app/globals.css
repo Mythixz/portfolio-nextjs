@@ -36,3 +36,9 @@ body {
   -webkit-text-stroke: 2px white; /* เพิ่มขอบตัวอักษร */
   color: transparent; /* ซ่อนสีด้านใน */
 }
+
+.text-gradient {
+  background: -webkit-linear-gradient(45deg, #ff82f3, #7b13ff 50%, #400d64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

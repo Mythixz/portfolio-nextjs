@@ -34,7 +34,7 @@ const services = [
       <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-8">
           <h2 className="text-5xl font-bold mb-12">
-            <span className="text-gray-400">What</span> <span className="text-purple-500">I Do</span>
+            <span className="text-gray-400">What</span> <span className="text-gradient">I Do</span>
           </h2>
           <div className="space-y-6">
             {services.map((service) => (
@@ -43,7 +43,7 @@ const services = [
                 className="relative flex items-center p-6 bg-gray-800 rounded-lg shadow-md transition duration-300 hover:bg-gradient-to-r hover:from-gray-800 hover:to-purple-900"
               >
                 {/* หมายเลข */}
-                <div className="text-3xl font-bold text-purple-400 mr-6">{service.id}/</div>
+                <div className="text-3xl font-bold text-gradient mr-6">{service.id}/</div>
                 {/* ไอคอน */}
                 <div className="text-4xl text-purple-300 mr-6">{service.icon}</div>
                 {/* เนื้อหา */}

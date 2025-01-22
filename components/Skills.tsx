@@ -34,20 +34,27 @@ const skills = [
 export default function Skills() {
   return (
     <section className="py-16 bg-black text-white">
-      <h2 className="text-5xl font-bold mb-12 text-center">
-        <span className="text-gray-400">My</span> <span className="text-purple-500">Skills</span>
+      {/* Section Header */}
+      <h2 className="text-5xl font-bold mb-8 text-center">
+        <span className="text-gray-400">My</span>{" "}
+        <span className="text-gradient">Tech Stack</span>
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+
+      {/* Divider */}
+      <div className="border-t-2 border-gray-600 w-1/2 mx-auto mb-12"></div>
+
+      {/* Skill Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className={`p-6 rounded-xl bg-gradient-to-br ${skill.gradient} shadow-md transition-transform transform hover:scale-105`}
+            className={`p-6 rounded-xl bg-gradient-to-br ${skill.gradient} shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl`}
           >
             <div className="flex items-center space-x-4">
               <img
                 src={skill.icon}
                 alt={skill.name}
-                className="h-16 w-16 object-contain"
+                className="h-16 w-16 object-contain transform transition-transform hover:scale-110"
               />
               <h3 className="text-2xl font-bold">{skill.name}</h3>
             </div>
