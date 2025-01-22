@@ -1,10 +1,10 @@
 import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Carousel from "@/components/Carousel";
 import Portfolio from "@/components/portfolio";
 import Achievements from "@/components/Achievements";
 import AnimatedCard from "@/components/AnimatedCard";
+import Projects from "@/components/projects";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <Carousel />
       <Services />
-      <Skills />
+      <Projects />
       <Portfolio />
       <Achievements />
       {/* เพิ่ม props ให้ AnimatedCard */}
