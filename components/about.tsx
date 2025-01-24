@@ -3,43 +3,43 @@ import React from "react";
 const About: React.FC = () => {
   const education = [
     {
-      year: "2019 - 2020",
-      title: "Master in Computer Science",
+      year: "2016 - 2022",
+      title: "Suksanareewittaya School",
       description:
-        "Focused on advanced algorithms, machine learning, and system design.",
+        "High School Degree in Math-Sci-Tech Major Good Conduct and Diligence in Studies Certificate GPA: 3.46",
     },
     {
-      year: "2015 - 2019",
-      title: "Bachelor in Computer Science",
+      year: "2022 - PRESENT",
+      title: "King Mongkut's University of Technology Thonburi",
       description:
-        "Studied core programming concepts, databases, and web development.",
+        "Faculty of Industrial Education and Technology Division of Computer and Information Technology",
     },
     {
-      year: "2019 - 2020",
-      title: "Certificate in UI & UX Design",
+      year: "2025 - PRESENT",
+      title: "Certificate in responsive-web and javascript-algorithms",
       description:
-        "Learned the principles of user interface and user experience design.",
+      "Learned the principles of responsive web design and mastered JavaScript algorithms and data structures.",
     },
   ];
 
   const experience = [
     {
-      year: "2021 - 2024",
-      title: "Chief Operating Officer @flatheme",
-      description:
-        "Managed operations, projects, and team performance for a tech startup.",
-    },
-    {
-      year: "2019 - 2021",
-      title: "UI & UX Designer @flatheme",
-      description:
-        "Designed modern user interfaces and improved user experience workflows.",
-    },
-    {
       year: "2018 - 2019",
-      title: "Creative Director @flatheme",
+      title: "Founder & Lead Developer @Melody Server Minecraft",
       description:
-        "Led creative projects and ensured alignment with brand objectives.",
+        "Built and managed a Minecraft server with 100–150+ active players, generating 50,000+ THB in revenue. Developed custom game modes and features to enhance the gameplay.",
+    },
+    {
+      year: "2019 - 2022",
+      title: "Developer @KRK Server Minecraft",
+      description:
+        "Developed and managed KRK Server Minecraft, handling server operations, real-time data processing, and custom system configurations for 5.3M+ subscribers.",
+    },
+    {
+      year: "2024 - 2025",
+      title: "Frontend Developer @Bainisys co., ltd.",
+      description:
+        "Developed Bainisys, a cargo platform integrated with Thailand's Customs Department and NSW system. Ensured seamless functionality and user-friendly design to support logistics.",
     },
   ];
 
