@@ -53,19 +53,40 @@ export default function Hero() {
 
       {/* Social Media Icons */}
       <div className="flex space-x-4 mt-16">
-        <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-github"></i>
-        </a>
-        <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="#" className="text-2xl hover:text-gray-400">
-          <i className="fab fa-discord"></i>
-        </a>
-      </div>
+  <a 
+    href="https://github.com/Mythixz" 
+    className="text-2xl hover:text-gray-400" 
+    aria-label="GitHub Profile"
+  >
+    <i className="fab fa-github"></i>
+    <span className="sr-only">GitHub</span>
+  </a>
+  <a 
+    href="https://linkedin.com/in/Mythixz" 
+    className="text-2xl hover:text-gray-400" 
+    aria-label="LinkedIn Profile"
+  >
+    <i className="fab fa-linkedin"></i>
+    <span className="sr-only">LinkedIn</span>
+  </a>
+  <a 
+    href="https://instagram.com/Mythixz" 
+    className="text-2xl hover:text-gray-400" 
+    aria-label="Instagram Profile"
+  >
+    <i className="fab fa-instagram"></i>
+    <span className="sr-only">Instagram</span>
+  </a>
+  <a 
+    href="https://discordapp.com/users/Mythixz" 
+    className="text-2xl hover:text-gray-400" 
+    aria-label="Discord Profile"
+  >
+    <i className="fab fa-discord"></i>
+    <span className="sr-only">Discord</span>
+  </a>
+</div>
+
     </section>
   );
 }
