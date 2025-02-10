@@ -11,15 +11,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [loading, setLoading] = useState(true);
-  const [darkMode, setDarkMode] = useState(false); // เพิ่ม State สำหรับ Dark Mode
+  const [loading, setLoading] = useState<boolean>(true); // เริ่มต้นที่ true เพื่อรอการตรวจสอบ
+  const [isInitialized, setIsInitialized] = useState<boolean>(false); // ตรวจสอบว่าโหลดข้อมูลเสร็จแล้วหรือยัง
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    const hasVisited = localStorage.getItem("hasVisited");
 
-    return () => clearTimeout(timer);
+    if (hasVisited) {
+      setLoading(false); // ไม่แสดง Loader หากเคยเข้ามาแล้ว
+    } else {
+      setLoading(true);
+      localStorage.setItem("hasVisited", "true");
+      setTimeout(() => {
+        setLoading(false); // แสดง Loader แค่ครั้งแรก
+      }, 2000);
+    }
+
+    // ตั้งค่าให้บอกว่าข้อมูลพร้อมแล้ว
+    setIsInitialized(true);
   }, []);
 
   useEffect(() => {
@@ -28,7 +38,12 @@ export default function RootLayout({
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, [darkMode]); // เปลี่ยน class ของ html เมื่อ darkMode เปลี่ยน
+  }, [darkMode]);
+
+  if (!isInitialized) {
+    // ระหว่างรอตรวจสอบ `localStorage` ไม่แสดงอะไรเลย
+    return null;
+  }
 
   return (
     <html lang="en">

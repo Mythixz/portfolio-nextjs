@@ -1,30 +1,45 @@
 "use client"; // ระบุว่าเป็น Client Component
 
 import React from "react";
-import Hyperspeed from "@/src/blocks/Backgrounds/Hyperspeed/Hyperspeed"; // เปลี่ยน path ให้ถูกต้อง
-import ASCIIText from "@/src/blocks/TextAnimations/ASCIIText/ASCIIText";
+import InfiniteMenu from "@/src/blocks/Components/InfiniteMenu/InfiniteMenu";
+
+const items = [
+  {
+    image: 'main.png', // ใช้รูปภาพในเครื่อง
+    link: 'https://google.com/',
+    title: 'Item 1',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: 'main.png', // ใช้รูปภาพในเครื่อง
+    link: 'https://google.com/',
+    title: 'Item 2',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: 'main.png', // ใช้รูปภาพในเครื่อง
+    link: 'https://google.com/',
+    title: 'Item 3',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: 'main.png', // ใช้รูปภาพในเครื่อง
+    link: 'https://google.com/',
+    title: 'Item 4',
+    description: 'This is pretty cool, right?'
+  }
+];
 
 const Hero: React.FC = () => {
-  // เพิ่มฟังก์ชัน handleAnimationComplete
-  const handleAnimationComplete = () => {
-    console.log("Animation completed!");
-  };
-
   return (
     <div className="relative h-screen w-full">
-      {/* Hyperspeed Background */}
-      <Hyperspeed preset="cyberpunk" />
-
-      {/* Content Over Hyperspeed */}
-      <div className="absolute inset-0 flex items-center justify-center text-white text-8xl">
-      <ASCIIText
-  text='Mythixz'
-  enableWaves={true}
-  asciiFontSize={2}
-/>
+      {/* InfiniteMenu */}
+      <div style={{ height: '600px', position: 'relative' }}>
+        <InfiniteMenu items={items} />
       </div>
     </div>
   );
 };
 
 export default Hero;
+
